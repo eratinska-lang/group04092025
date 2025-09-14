@@ -11,5 +11,5 @@ def max_number(list_with_numbers: list) -> float:
     return max(list_with_only_numbers)
 
 
-def multiple(a,b):
-    return a*b
+def multiple(a,c):
+    return a*c

@@ -12,7 +12,7 @@ def main():
 
     print("________________________________________________")
 
-    result3 = multiple(7,8)
+    result3 = multiple(3,9)
     print(result3)
 
 if __name__ == "__main__":
