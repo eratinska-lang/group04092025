@@ -1,3 +1,6 @@
+from service.logger import logger
+
+
 def my_sentence():
     return "Hello, buddy!"
 
@@ -8,6 +11,7 @@ def max_number(list_with_numbers: list) -> float:
             list_with_only_numbers.append(number)
     if not list_with_only_numbers:
         return 0
+    logger.info(f"Max_number: {max(list_with_only_numbers)=}")
     return max(list_with_only_numbers)
 
 
