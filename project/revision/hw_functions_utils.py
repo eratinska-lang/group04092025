@@ -12,4 +12,4 @@ def max_number(list_with_numbers: list) -> float:
 
 
 def multiple(number_one = float,number_two = float) -> float:
-    return number_one*number_two
+    return number_one * number_two
