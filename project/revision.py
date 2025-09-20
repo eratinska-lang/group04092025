@@ -5,9 +5,6 @@ def main():
     result = is_number_bigger_than_given(candidate_number=5)
     print(result)
 
-    result = is_number_bigger_than_given(candidate_number=5, threshold=1)
-    print(result)
-
     given_list = []
 
     add_salt_too_list(given_list)
