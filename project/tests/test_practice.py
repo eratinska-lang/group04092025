@@ -1,5 +1,6 @@
 import pytest
-from homework15.oop_practice import Book, Library
+from homework15.oop_practice import Book
+from homework16.conftest import library, books
 
 class TestBook:
     @pytest.mark.parametrize("title, author, isbn", [("title", "author", 1),("title", "author", 2),("title", "author", 3)])
@@ -9,17 +10,6 @@ class TestBook:
         assert book.author == author
         assert book.ISBN == isbn
 
-@pytest.fixture
-def library():
-    return Library("КСД: Клуб Сімейного Дозвілля")
-
-@pytest.fixture
-def books():
-    return [
-        Book("Автор 1", "Книга 1", 1),
-        Book("Автор 2", "Книга 2", 2),
-        Book("Автор 3", "Книга 3", 3)
-    ]
 
 class TestLibrary:
     def test_add_book(self, library, books):
