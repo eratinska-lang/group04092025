@@ -33,7 +33,7 @@ with psycopg2.connect(
         """
         cursor.execute(query2)
 
-
+#a
 #CREATE
 
 with psycopg2.connect(
