@@ -1,5 +1,6 @@
 from redis_service.base import reddis_client
 
+
 reddis_client.set("my_favorite_car", "Audi Q7")
 
 reddis_client.setex("my_pet", 2 * 60 * 60, "собака Макс")

@@ -3,6 +3,7 @@ from redis_service.base import reddis_client
 pubsub = reddis_client.pubsub()
 pubsub.subscribe("school")
 
+
 with open("messages.txt", "a", encoding="utf-8") as f:
     for message in pubsub.listen():
         if message["type"] == "message":
