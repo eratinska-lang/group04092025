@@ -44,5 +44,17 @@ with psycopg2.connect(
         port=5432,
 ) as connection:
     with connection.cursor() as cursor:
-        query_insert = 'INSERT INTO brand (name) VALUES (%s)'
-        cursor.execute(query_insert, ("BMW", ))
+        #query_insert = 'INSERT INTO brand (name) VALUES (%s)'
+        #cursor.execute(query_insert, ("BMW", ))
+
+        # query_insert = 'INSERT INTO brand (name) VALUES (%s) RETURNING id, name'
+        # result = cursor.execute(query_insert, ("TOYOTA2",))
+        # print(result)
+
+        query_insert = 'INSERT INTO customer (name) VALUES (%s) RETURNING id, name'
+        customers = [
+            ("Max",),
+            ("Alex",),
+            ("Tom",)
+        ]
+        cursor.executemany(query_insert, customers)
